@@ -43,3 +43,11 @@ func main() {
 	}
 }
 ```
+
+## Raspberry Pi compatibility
+
+This driver has has only been tested on an Raspberry Pi Zero WH using integrated bluetooth but may work well on other Raspberry Pi having integrated Bluetooth
+
+## License
+
+MIT License
