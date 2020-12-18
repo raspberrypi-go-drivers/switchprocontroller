@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/bbayszczak/raspberrypi-go-drivers/switchprocontroller"
+	"github.com/raspberrypi-go-drivers/switchprocontroller"
 )
 
 func Example_nonBlocking() {
