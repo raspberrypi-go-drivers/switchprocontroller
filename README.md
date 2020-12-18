@@ -1,6 +1,6 @@
 # Nintendo Switch Pro Controller
 
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/bbayszczak/raspberrypi-go-drivers)](https://pkg.go.dev/github.com/raspberrypi-go-drivers/switchprocontroller)
+[![Go Reference](https://pkg.go.dev/badge/github.com/raspberrypi-go-drivers/switchprocontroller.svg)](https://pkg.go.dev/github.com/raspberrypi-go-drivers/switchprocontroller)
 ![golangci-lint](https://github.com/raspberrypi-go-drivers/switchprocontroller/workflows/golangci-lint/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/raspberrypi-go-drivers/switchprocontroller)](https://goreportcard.com/report/github.com/raspberrypi-go-drivers/switchprocontroller)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -14,7 +14,7 @@ connected using Bluetooth
 
 ## Documentation
 
-For full documentation, please visit [![PkgGoDev](https://pkg.go.dev/badge/github.com/bbayszczak/raspberrypi-go-drivers)](https://pkg.go.dev/github.com/raspberrypi-go-drivers/switchprocontroller)
+For full documentation, please visit [![Go Reference](https://pkg.go.dev/badge/github.com/raspberrypi-go-drivers/switchprocontroller.svg)](https://pkg.go.dev/github.com/raspberrypi-go-drivers/switchprocontroller)
 
 ## Quick start
 
