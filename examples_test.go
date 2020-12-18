@@ -9,7 +9,9 @@ import (
 
 func Example_nonBlocking() {
 	controller := switchprocontroller.NewSwitchProController()
-	controller.StartListener(0)
+	if err := controller.StartListener(0); err != nil {
+		fmt.Printf("impossible to start listener: %s", err.Error())
+	}
 	for {
 		// display button A state
 		aState, _ := controller.GetButtonState("a")
@@ -27,7 +29,9 @@ func Example_nonBlocking() {
 
 func Example_blocking() {
 	controller := switchprocontroller.NewSwitchProController()
-	controller.StartListener(0)
+	if err := controller.StartListener(0); err != nil {
+		fmt.Printf("impossible to start listener: %s", err.Error())
+	}
 	for {
 		select {
 		case event := <-controller.Events:
@@ -45,12 +49,16 @@ func Example_blocking() {
 
 func ExampleNewSwitchProController() {
 	controller := switchprocontroller.NewSwitchProController()
-	controller.StartListener(0)
+	if err := controller.StartListener(0); err != nil {
+		fmt.Printf("impossible to start listener: %s", err.Error())
+	}
 }
 
 func ExampleSwitchProController_GetStick() {
 	controller := switchprocontroller.NewSwitchProController()
-	controller.StartListener(0)
+	if err := controller.StartListener(0); err != nil {
+		fmt.Printf("impossible to start listener: %s", err.Error())
+	}
 	leftStick, _ := controller.GetStick("left")
 	fmt.Printf("x:%f - y:%f\n", leftStick.X, leftStick.Y)
 	// Output: x:0.000000 - y:0.000000
@@ -58,12 +66,16 @@ func ExampleSwitchProController_GetStick() {
 
 func ExampleSwitchProController_StartListener() {
 	controller := switchprocontroller.NewSwitchProController()
-	controller.StartListener(0)
+	if err := controller.StartListener(0); err != nil {
+		fmt.Printf("impossible to start listener: %s", err.Error())
+	}
 }
 
 func ExampleSwitchProController_GetButton_released() {
 	controller := switchprocontroller.NewSwitchProController()
-	controller.StartListener(0)
+	if err := controller.StartListener(0); err != nil {
+		fmt.Printf("impossible to start listener: %s", err.Error())
+	}
 	aButton, _ := controller.GetButton("a")
 	fmt.Printf("name:%s - state:%d\n", aButton.Name, aButton.State)
 	// Output: name:a - state:0
@@ -71,7 +83,9 @@ func ExampleSwitchProController_GetButton_released() {
 
 func ExampleSwitchProController_GetButton_pressed() {
 	controller := switchprocontroller.NewSwitchProController()
-	controller.StartListener(0)
+	if err := controller.StartListener(0); err != nil {
+		fmt.Printf("impossible to start listener: %s", err.Error())
+	}
 	aButton, _ := controller.GetButton("a")
 	fmt.Printf("name:%s - state:%d\n", aButton.Name, aButton.State)
 	// Output: name:a - state:1
@@ -79,7 +93,9 @@ func ExampleSwitchProController_GetButton_pressed() {
 
 func ExampleSwitchProController_GetButtonState_released() {
 	controller := switchprocontroller.NewSwitchProController()
-	controller.StartListener(0)
+	if err := controller.StartListener(0); err != nil {
+		fmt.Printf("impossible to start listener: %s", err.Error())
+	}
 	aState, _ := controller.GetButtonState("a")
 	fmt.Printf("state:%d\n", aState)
 	// Output: state:0
@@ -87,7 +103,9 @@ func ExampleSwitchProController_GetButtonState_released() {
 
 func ExampleSwitchProController_GetButtonState_pressed() {
 	controller := switchprocontroller.NewSwitchProController()
-	controller.StartListener(0)
+	if err := controller.StartListener(0); err != nil {
+		fmt.Printf("impossible to start listener: %s", err.Error())
+	}
 	aState, _ := controller.GetButtonState("a")
 	fmt.Printf("state:%d\n", aState)
 	// Output: state:1
